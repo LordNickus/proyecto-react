@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import ItemsList from './ItemsList'
 
 function App() {
+  var [search, setSearch] = useState("")
+  var [results, setResults] = useState([])
+
+  var options =[
+    'Electrodomesticos','Instrumentos musicales', 'Moda', 'Deportes,'
+  ]
+  function getOptions (e) {
+    if(e.target.value == 0){
+      setSearch(e.target.value)
+      setResults([])
+      return
+    }
+
+    setSearch(e.target.value)
+
+    var resultados=options.filter(function (option){
+        return option.includes(e.target.value)
+
+    })
+    setResults(resultados)
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="App-header"></div>
+
+    <div className="App-nav">
+
+
+    <div>
+      {
+        results.map((options, i)=>{
+          return <div key={i}>{options}</div>
+        })
+
+      }
+
     </div>
+   </div>
+    <ItemsList />  
+    
+  </>
   );
 }
 
