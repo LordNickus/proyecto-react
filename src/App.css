@@ -1,38 +1,481 @@
-.App {
-  text-align: center;
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  /* vertical-align: baseline; */
+  /* background: transparent; */
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* No olvides definir estilos para focus */
+:focus {
+  outline: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* No olvides resaltar de alguna manera el texto insertado/borrado */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* En el código HTML es necesario añadir cellspacing="0" */
+/* table {
+  border-collapse: collapse;
+  border-spacing: 0; */
+/* } */
+
+a{
+  color:#050759;
+  /* background-color: rgba(15, 240, 45,0.8); */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: 'Crimson Pro', serif;
+  /* display: block; */
+}
+
+
+header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content:space-evenly;
+}
+
+#htop{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;    
+    background-image: url("Colores y texturas/06.jpg");
+    background-size: cover;
+    padding: 2px;
+    
+    }
+.redesTop:hover {
+      transform: scale(1.03);
+}
+.redesTop{
+    display: inline;
+    border: 1px solid black;
+    align-items:center;
+    font-family: 'Work Sans', sans-serif;
+    font: 20px italic bold;
+    transition: transform ease-in-out 0.3s 0.1s;
+   }
+
+.redesTop img {
+    display: inline;
+    padding: 6px;
+    text-align: center;
+    transition: transform ease-in-out 0.3s 0.1s;
+   }
+
+#lupa {
+    display: flex;
+    align-items:center;
+    border: 1px solid black;
+    border-radius: 3px;
+   }
+#hmid{
+  background-image: url("https://placeimg.com/1000/480/nature");
+  background-size: cover;
+}
+
+nav{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-image: url("Colores y texturas/07.jpg");
+  background-size: cover;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  
+}
+.hamburguesa {
+  display: none;
+ }
+
+.menu{
   color: white;
+  display: inline;
+  align-items:left;
+  float:left;
+  }
+.menu a{
+    color:#050759;
+    background-color: rgba(15, 240, 45,0.8);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-family: 'Crimson Pro', serif;
+    border-radius: 3px;
+    display: block;
+  }
+.subm {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    color: solid;
+  }
+
+.menulista li:hover > ul{
+  display:block;
+  
+  }
+.menulista li ul li {
+  position: relative;
+  top:10px;
 }
 
-.App-link {
-  color: #61dafb;
+.menulista .menu ul li{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+.central,
+.centralViajes {
+  display: flex;
+  justify-content:space-evenly; 
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 12px;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  background-image: url("Colores y texturas/06.jpg");
+  background-size:cover;
+}
+.central section{
+  margin: 12px; 
+  padding: 12px;
+  border-radius: 12px black;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  width: 45%;
+  
+}
+section:hover {
+  transform: scale(1.01);
+  
+}
+section{
+  border-radius: 5px;
+}
+#imagen1{
+    background-color: rgba(250, 247, 79, 0.8);
+    transition: transform ease-in-out 0.3s 0.1s;
+    
+   
+}
+.textocentral1{
+    display:ruby-text;
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
+}
+#imagen2{
+  width: 45%;
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+   
+}
+.textocentral2{
+  color: #06097C;
+  background-color: rgba(182, 180, 180, 0.3);
+  display:ruby-text;
+  text-align: justify;
+  font-family: 'Work Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#entrada{
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+    
+}
+#entrada2{
+  width: 45%;
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+  
+}
+#botonentrada{
+  margin-left: 40%;
+}
+.triple {
+  display: flex;
+  justify-content:space-evenly; 
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 12px;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  background-image: url("Colores y texturas/06.jpg");
+  background-size:cover;
+ 
+}
+.triple section{
+  margin: 12px; 
+  padding: 12px;
+  border-radius: 12px black;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  width: 25%;
+}
+#noticias{
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+ 
+}
+.textocentral1{
+  display:ruby-text;
+  text-align: justify;
+  font-family: 'Work Sans', sans-serif;
+}
+#viajes{
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+  
+}
+#botonviaje{
+  margin-left: 40%;
+}
+#consejos{
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+  
+}
+footer{
+    height: 130px;
+    clear: both;
+    background-color: rgba(15, 160, 2, 0.8);
+    padding: 24px;
+    
+}
+footer form input{
+padding: 6px;
+font-size: 18px;
+border: 1px solid green;
+border-radius: 3px;
+}
+footer form button{
+padding: 6px;
+color: white;
+background:blue;
+border: 1px solid blue;
+}
+
+.piepagina{
+    width: 20%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    display:flex;
+    text-align: justify;
+}
+.cookie {
+  background: rgba(0, 0,0,0.8);
+  color: white;
+  padding: 24px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+.cookie a{
+  border: none;
+  color: red;
+}
+
+/*/ hoja Nosotros /*/
+#Anne{
+  display: inline;
+  align-items:center;
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+#Franco{
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+/*/ hoja Noticias /*/
+.centralNoticias {
+  /* display: inline; */
+  justify-content:space-evenly; 
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 12px;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  background-image: url("host3000:/Colores y texturas/06.jpg");
+  background-size:cover;
+}
+.centralNoticias section{
+  margin: 12px; 
+  padding: 12px;
+  border-radius: 12px black;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+}
+
+#Nacionales{
+  display: block;
+  align-items:center;
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+#Internacionales{
+  display: block;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+#cambioMoneda{
+  display: block;
+  align-items:center;
+  background-color: rgba(240, 15, 240, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+/* Hoja Consejos */
+#consejosSeccion{
+  width:46%;
+  display: inline-block;
+  align-items:center;
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburguesa {
+   display: none;
+   
   }
-  to {
-    transform: rotate(360deg);
+  .central,
+  .triple {
+    width: 97%;
+  
   }
+  .central section,
+  .triple section {
+    width: 40%;
+  }
+
+  .imgcentral1,
+  .imgtriple1{
+    width: 100%;
+  }
+  #imagen1,
+  #noticias {
+    display: inline;
+    align-content: center;
+    justify-content: center;
+  
+  }
+  .textocentral1{
+    display:flex;
+    text-align: justify;
+  }
+ 
+  #entrada,
+  #viajes,
+  #consejos {
+    display: inline;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  #botonentrada{
+    margin-left: 35%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #lupa {
+    display: inline;
+     }
+  nav#linksnav {
+      position: sticky;
+      top: 0;
+    }
+  .central,
+  .triple{
+    width: 95%;
+  }
+  .central section,
+  .triple section {
+    width: 100%;
+  }
+
+  #linksnav {
+    position: relative;
+}
+  .menulista {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* background:rgb(255, 255, 255); */
+  }
+  .hamburguesa {
+    display: flex;
+  
+  }
+
+  .hamburguesa:hover + .menulista{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 20px;
+  }
+  .menu{
+    display:inline;
+    height: max-content;
+  }
+  .subm {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    
+  }
+  /* .menulista li:hover > ul{
+    display:block;
+    
+  } */
+  /* .menulista li ul li {
+    position: relative;
+    top:10px;
+  }
+   */
+  /* .menulista .menu ul li{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+  } */
 }
