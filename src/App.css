@@ -465,18 +465,4 @@ border: 1px solid blue;
     min-width: 140px;
     
   }
-  /* .menulista li:hover > ul{
-    display:block;
-    
-  } */
-  /* .menulista li ul li {
-    position: relative;
-    top:10px;
-  }
-   */
-  /* .menulista .menu ul li{
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-  } */
 }

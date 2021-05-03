@@ -1,4 +1,5 @@
 import './App.css';
+import './htmlcentral.js';
 
 function App() {
   return (
