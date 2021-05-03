@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -12,12 +11,12 @@ function App() {
             <div id="lupa">
                 <button>Que estas buscando?</button>
                 <input type="text" />
-                <img src="imagenes/Lupa2.png"alt="lupa"width="30" height="30"/>
+            <img src="imagenes/Lupa2.png" alt="lupa"width="30" height="30"/>
             </div>
       </header>
     
     <header id="hmid">
-        <img src="imagenes/Logo2.jpeg"alt="logo"width="150" height="150"/>
+        <img src="imagenes/Logo2.jpeg" alt="logo"width="150" height="150"/>
 
     </header>
 
@@ -29,7 +28,7 @@ function App() {
         </div>
     </nav>
 
-<div class="central">    
+<div className="central">    
 
     <section id="imagen1">
         <h2>NOSOTROS</h2>
@@ -53,7 +52,7 @@ function App() {
 
 </div>
 
-<div class="triple">    
+<div className="triple">    
 
     <section id="noticias">
         <h2>NOTICIAS</h2>
