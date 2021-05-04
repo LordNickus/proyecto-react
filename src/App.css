@@ -53,12 +53,10 @@ del {
 
 a{
   color:#050759;
-  /* background-color: rgba(15, 240, 45,0.8); */
   text-decoration: none;
   padding: 10px 15px;
   font-family: 'Crimson Pro', serif;
-  /* display: block; */
-}
+ }
 
 
 header{
@@ -80,7 +78,7 @@ header{
 }
 .redesTop{
     display: inline;
-    border: 1px solid black;
+    
     align-items:center;
     font-family: 'Work Sans', sans-serif;
     font: 20px italic bold;
@@ -108,8 +106,10 @@ header{
 
 nav{
   display: flex;
-  justify-content:center;
-  align-items:center;
+  
+  justify-content:space-evenly;
+  align-items:flex-end;
+  
   background-image: url("Colores y texturas/07.jpg");
   background-size: cover;
   padding: 12px;
@@ -121,13 +121,13 @@ nav{
   display: none;
  }
 
-.menu{
-  color: white;
+.menulista{  
   display: inline;
   align-items:left;
   float:left;
   }
-.menu a{
+
+.menu{
     color:#050759;
     background-color: rgba(15, 240, 45,0.8);
     text-decoration: none;
@@ -135,18 +135,21 @@ nav{
     font-family: 'Crimson Pro', serif;
     border-radius: 3px;
     display: block;
+    /* justify-content:space-evenly; */
+    float:left;
   }
-.subm {
+  .menulista li:hover > ul{
+    display:block;
+    
+    }
+/* .subm {
     display: none;
     position: absolute;
     min-width: 140px;
     color: solid;
   }
 
-.menulista li:hover > ul{
-  display:block;
-  
-  }
+
 .menulista li ul li {
   position: relative;
   top:10px;
@@ -157,7 +160,7 @@ nav{
     flex-direction: column;
     text-align: left;
     
-}
+} */
 .central,
 .centralViajes {
   display: flex;

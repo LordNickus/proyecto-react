@@ -1,13 +1,113 @@
 import './App.css';
-import './htmlcentral.js';
+// import './htmlcentral.js';
 
 function App() {
+    var redesSociales=[
+        { logoImagen : 'imagenes/Yout.jpg',
+          alterno :'youtube',
+          marcaImagen: 'Youtube',
+        },           
+        { logoImagen : 'imagenes/Face.png',
+          alterno :'Facebook',
+          marcaImagen: 'Facebook', 
+        },
+        { logoImagen : 'imagenes/Inst.jpg',
+          alterno :'insta',
+          marcaImagen: 'Instagram',
+        },
+        { logoImagen : 'imagenes/Wats.jpg',
+          alterno :'wassp',
+          marcaImagen: 'Wassap',
+        },
+        ]
+        var menusLista =[
+            { destinoHtml : 'a1_nosotros',
+              menuPricipal : 'Nosotros',
+              subLinks :[{
+                  destinoHtml : 'a1_nosotros.html#Anne',
+                  menuPricipal : 'Anne',
+                },
+                {
+                  destinoHtml : 'a1_nosotros.html#Franco',
+                  menuPricipal : 'Franco',
+                }],
+            },
+            {   destinoHtml : 'a2_noticias',
+                menuPricipal : 'Noticias',
+                subLinks : [{
+                  destinoHtml : 'a2_noticias.html#Nacionales',
+                  menuPricipal : 'Nacionales',
+              },
+              {
+                 destinoHtml : 'a2_noticias.html#Internacionales',
+                 menuPricipal : 'Internacionales',
+              },
+              {  
+                 destinoHtml : 'a2_noticias.html#cambioMoneda',
+                 menuPricipal : 'Cambio Monedas',
+              }],
+            },
+            {   destinoHtml : 'a3_viajes',
+                menuPricipal : 'Viajes',
+                subLinks : [{
+                  destinoHtml : 'a3_viajes.html#Lugares Imperdibles',
+                  menuPricipal : 'Lugares Imperdibles',
+              },
+              {
+                  destinoHtml : 'a3_viajes.html#Donde dormir?',
+                  menuPricipal : 'Donde dormir?',
+              },
+              {
+                  destinoHtml : 'a3_viajes.html#Donde comer?',
+                  menuPricipal : 'Donde comer?',
+              },
+              {
+                  destinoHtml : 'a3_viajes.html#Que hacer?',
+                  menuPricipal : 'Que hacer?',
+              },
+              {
+                  destinoHtml : 'a3_viajes.html#Visita Obligada',
+                  menuPricipal : 'Visita Obligada',
+              }],
+            },
+            {   destinoHtml : 'a4_consejos',
+                menuPricipal : 'Consejos',
+                subLinks : [{
+                  destinoHtml : 'a4_consejos.html#Estaciones de Servicios',
+                  menuPricipal : 'Estaciones de Servicios',
+              },
+              {
+                  destinoHtml : 'a4_consejos.html#Bancos/Cajeros/Cashbank',
+                  menuPricipal : 'Bancos/Cajeros/Cashbank',
+              },
+              {
+                  destinoHtml : 'a4_consejos.html#Info util Pre-viaje',
+                  menuPricipal : 'Info util Pre-viaje',
+              },
+              {
+                  destinoHtml : 'a4_consejos.html#Estaciones climaticas',
+                  menuPricipal : 'Estaciones climaticas',
+              }],
+            },
+            { destinoHtml : 'a5_rinconp',
+              menuPricipal : 'El rincon perezoso',
+              subLinks : []
+              },
+        ]
+        var navMenu=""
   return (
   <div>
     <header id="htop"> 
+    
             <div>
-                <ul className="redesTop"> 
-                </ul>
+                { 
+                redesSociales.map(function(dato){
+                    return <div className="redesTop" key={dato.logoImagen}>
+                      <img src={dato.logoImagen} width = "30" height = "30"/>  
+                      {/* {dato.marcaImagen} */}
+                      </div>     
+                })    
+            }                    
             </div> 
             <div id="lupa">
                 <button>Que estas buscando?</button>
@@ -25,7 +125,20 @@ function App() {
         <div className="hamburguesa">
             <img src="imagenes/menu.svg"/>
         </div>
-        <div className="menulista">
+        <div>
+        {
+           menusLista.map(function(dato){
+            return <div className="menulista" key={dato.menuPricipal}>
+              {/* {dato.menuPricipal} */}
+              <li className="menu">{dato.menuPricipal}</li>
+                {/* <ul class="subm">}
+              {<li><a href="+ menusLista.subLinks.destinoHtml +">' + 
+                menusLista.subLinks.menuPricipal + '</a></li>}
+              {</ul></li>} */}
+              </div>
+           })
+        }
+        
         </div>
     </nav>
 
