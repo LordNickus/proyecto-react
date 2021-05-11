@@ -1,7 +1,8 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core'
+import {Hidden, makeStyles} from '@material-ui/core'
 import Navbar from './Navbar'
 import Cajon from './Cajon'
+import Cajita from './Cajita'
 
 const estilos = makeStyles(theme => ({
     root: {
@@ -16,15 +17,33 @@ const estilos = makeStyles(theme => ({
 }))
 const Contenedor =()=>{
     const classes = estilos()
-
+    const [abrir, setAbrir] = React.useState(false)
+    const accionAbrir = () => {
+        setAbrir(!abrir)
+    }
+    
     return (
         <div className={classes.root}>
-            <Navbar />
-            <Cajon />
+            <Navbar accionAbrir={accionAbrir}/>
+            <Hidden xsDown>
+            <Cajon 
+                variant="permanent"
+                open={true}
+            />
+            </Hidden>
+            <Hidden smUp>
+            <Cajon 
+                variant="temporary"
+                open={abrir}
+                onClose={accionAbrir}
+            />
+            </Hidden>
+            
             <div className={classes.content}>
                 <div className={classes.toolbar}>
                 </div>
-                Proximamente una app de la p#t# MADREEEE!
+                <Cajita></Cajita>
+                
             </div>
         </div>
 

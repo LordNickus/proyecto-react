@@ -8,8 +8,10 @@ import SearchAppBar from './SearchBoton'
 const useStyles = makeStyles((theme) => ({
     // offset: theme.mixins.toolbar,
     appBar: {
-        width: `calc(100% - ${240}px)`,
-        marginLeft: 240,
+        [theme.breakpoints.up('sm')]: {
+            width: `calc(100% - ${240}px)`,
+            marginLeft: 240,
+        },
         top: 'auto',
         bottom: 0,
       },
@@ -18,23 +20,26 @@ const useStyles = makeStyles((theme) => ({
       },
       fabButton: {
         position: 'absolute',
-        zIndex: 1,
-        top: -30,
         left: 0,
-        right: 0,
-        margin: '0 auto',
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+          },
       },
     }));
 
 
-const Navbar =() => {
+const Navbar =(props) => {
     const classes=useStyles()
     return (
         <div>
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
-                    <IconButton color="inherit">
-                        <MenuIcon />
+                    <IconButton 
+                    color="inherit"
+                    onClick={()=> props.accionAbrir()}>
+                    
+                        <MenuIcon className={classes.fabButton} />
                     </IconButton>
                     <IconButton color="inherit"className={classes.grow}>
                         Login

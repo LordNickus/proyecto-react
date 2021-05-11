@@ -140,25 +140,7 @@ nav{
     display:block;
     
     }
-/* .subm {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-    color: solid;
-  }
 
-
-.menulista li ul li {
-  position: relative;
-  top:10px;
-}
-
-.menulista .menu ul li{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    
-} */
 .central,
 .centralViajes{
   display: flex;

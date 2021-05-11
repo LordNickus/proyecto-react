@@ -19,8 +19,8 @@ const Header = ()=>{
             <RedesSocialesTop></RedesSocialesTop></div>
          <div>
             <SearchAppBar></SearchAppBar>
-            </div>
-            </div>
+      </div>
+    </div>
     )
 
 }

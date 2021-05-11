@@ -1,0 +1,85 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import {Box, Grid} from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+
+
+const useStyles = makeStyles((theme) =>({
+    root:{
+        borderRadius:6
+    },
+    image: {
+        width: 128,
+        height: 128,
+      },
+    img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+      },
+
+}));
+
+
+const Cajita = ()=> {
+    const classes = useStyles()
+    return (
+        <div>
+          <Grid container>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="../colores y texturas/nene_garche.jpg"/>
+                        
+                    </Box> 
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        Proximamente una app de la p#t# MADREEEE!
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        Proximamente una app de la p#t# MADREEEE!
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        Proximamente una app de la p#t# MADREEEE!
+                    </Box>
+                </Grid>
+             </Grid>
+    </div>
+    )
+}
+
+
+export default Cajita

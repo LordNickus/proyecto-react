@@ -8,10 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles = makeStyles((theme) => ({
   toolbar:{
     backgroundColor: 'rgba(15, 160, 2, 0.8)',
-    palette:{
-      primary: 'none',
-    }
-    // borderRadius: theme.shape.borderRadius,
+    
   },
   
   root: {
@@ -62,7 +59,7 @@ export default function SearchAppBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="entrada">
       <AppBar position="relative" >
         <Toolbar className={classes.toolbar}>
            <div className={classes.search}>
@@ -83,3 +80,30 @@ export default function SearchAppBar() {
     </div>
   );
 }
+
+
+// export default function SearchAppBar() {
+//   const classes = useStyles();
+
+//   return (
+//     <div className={classes.root}>
+//       <AppBar position="relative" >
+//         <Toolbar className={classes.toolbar}>
+//            <div className={classes.search}>
+//             <div className={classes.searchIcon}>
+//               <SearchIcon />
+//             </div>
+//             <InputBase
+//               placeholder="Que buscas…?"
+//               classes={{
+//                 root: classes.inputRoot,
+//                 input: classes.inputInput,
+//               }}
+//               inputProps={{ 'aria-label': 'search' }}
+//             />
+//           </div>
+//         </Toolbar>
+//       </AppBar>
+//     </div>
+//   );
+// }
