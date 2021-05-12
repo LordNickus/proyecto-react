@@ -15,8 +15,9 @@ const useStyles = makeStyles((theme) =>({
     img: {
         margin: 'auto',
         display: 'block',
-        maxWidth: '100%',
-        maxHeight: '100%',
+        maxWidth: '90%',
+        maxHeight: '90%',
+        borderRadius:10
       },
 
 }));
@@ -36,7 +37,7 @@ const Cajita = ()=> {
                     m={2}
                     p={4}
                     >
-                        <img className={classes.img} alt="meme1" src="../colores y texturas/nene_garche.jpg"/>
+                        <img className={classes.img} alt="meme1" src="imagenes/177499455_1978241088996042_602127205732395587_n.jpg"/>
                         
                     </Box> 
                 </Grid>
@@ -49,7 +50,7 @@ const Cajita = ()=> {
                     m={2}
                     p={4}
                     >
-                        Proximamente una app de la p#t# MADREEEE!
+                        <img className={classes.img} alt="meme1" src="imagenes/179669852_323311799153010_684471748596487813_n.jpg"/>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -61,7 +62,7 @@ const Cajita = ()=> {
                     m={2}
                     p={4}
                     >
-                        Proximamente una app de la p#t# MADREEEE!
+                        <img className={classes.img} alt="meme1" src="imagenes/D_fYbhSXYAEzXdl.png"/>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -73,7 +74,7 @@ const Cajita = ()=> {
                     m={2}
                     p={4}
                     >
-                        Proximamente una app de la p#t# MADREEEE!
+                        <img className={classes.img} alt="meme1" src="imagenes/nene_garche.jpg"/>
                     </Box>
                 </Grid>
              </Grid>

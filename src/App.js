@@ -17,6 +17,9 @@ function App() {
     return(
         <Router>
            <Switch>
+           <Route path="/X_X_X.jsx">
+                <MaterialYoutube />
+            </Route>
            <Route path="/MaterialYoutube">
                 <MaterialYoutube />
             </Route>
