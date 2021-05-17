@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Navegador from './components/Navegador';
 import Header from './components/Header';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 function Home() {
 
@@ -23,6 +24,9 @@ function Home() {
         <Navegador></Navegador>
         <Button variant="contained" color="secondary">
         <Link to='/MaterialYoutube'>Super App Secreta!</Link>
+      </Button>
+      <Button variant="contained" color="primary">
+        <Link to='/components/Carrito'><ShoppingCartOutlinedIcon/></Link>
       </Button>
         
     </nav>

@@ -77,6 +77,66 @@ const Cajita = ()=> {
                         <img className={classes.img} alt="meme1" src="imagenes/nene_garche.jpg"/>
                     </Box>
                 </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="imagenes/memeProg1 (1).jpeg"/>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="imagenes/memeProg1 (1).jpg"/>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="imagenes/memeProg1 (2).jpg"/>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="imagenes/memeProg1 (3).jpg"/>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box className={classes.root}
+                     color='primary.contrastText'
+                     bgcolor='primary.main'
+                    border={3}
+                    borderColor='black'
+                    m={2}
+                    p={4}
+                    >
+                        <img className={classes.img} alt="meme1" src="imagenes/memeProg1 (4).jpg"/>
+                    </Box>
+                </Grid>
              </Grid>
     </div>
     )

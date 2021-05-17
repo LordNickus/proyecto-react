@@ -5,6 +5,7 @@ import Noticias from './Noticias';
 import Viajes from './Viajes';
 import Consejos from './Consejos';
 import ElRincon from './ElRincon';
+import Carrito from './components/Carrito';
 import {
     BrowserRouter as Router,
     Route,
@@ -17,8 +18,8 @@ function App() {
     return(
         <Router>
            <Switch>
-           <Route path="/X_X_X.jsx">
-                <MaterialYoutube />
+           <Route path="/components/Carrito">
+                <Carrito />
             </Route>
            <Route path="/MaterialYoutube">
                 <MaterialYoutube />

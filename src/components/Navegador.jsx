@@ -85,6 +85,7 @@ const Navegador = ()=> {
                     </div>
            })
         }
+    
         </div>
 
 
